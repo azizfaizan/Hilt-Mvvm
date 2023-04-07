@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".BaseAppClass"
@@ -15,10 +16,13 @@
         android:theme="@style/Theme.MyListApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DetailPage"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.WorkerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
